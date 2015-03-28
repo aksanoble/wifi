@@ -70,6 +70,7 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
+    <gap:plugin name="com.pylonproducts.wifiwizard" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

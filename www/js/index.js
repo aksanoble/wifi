@@ -24,7 +24,13 @@ var app = {
         testElment.innerHTML = "Ash";
         function onBatteryStatus(info) {
     // Handle the online event
-    testElement.innerHTML = info.level;
+        testElement.innerHTML = info.level;
+        WifiWizard.listNetworks(listHandler, fail);
+        function listHandler (list) {
+          var wifiElement = document.getElementById('wifi');
+          wifiElement.innerHTML = list;
+        }
+
     }
     },
     // Update DOM on a Received Event
