@@ -18,6 +18,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+
+        var testElement = document.getElementById('test');
+        testElment.innerHTML = "Ash";
+        function onBatteryStatus(info) {
+    // Handle the online event
+    testElement.innerHTML = info.level;
+    }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -30,4 +38,5 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-};
+
+}
