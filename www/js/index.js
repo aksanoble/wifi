@@ -82,8 +82,12 @@ WifiWizard.listNetworks(test.handleList);
 addToStatus("Listing networks...");
 },
 
-scanNetworks: function () {
-WifiWizard.getScanResults(test.handleList);
+scan: function () {
+  addToStatus("Results: ");
+  WifiWizard.getScanResults(listHandler);
+  function listHandler(list) {
+  addToStatus(list);
+}
 
 },
 
