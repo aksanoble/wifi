@@ -25,13 +25,8 @@ var app = {
         function onBatteryStatus(info) {
     // Handle the online event
         testElement.innerHTML = info.level;
-        WifiWizard.listNetworks(listHandler, fail);
-        function listHandler (list) {
-          var wifiElement = document.getElementById('wifi');
-          wifiElement.innerHTML = list;
-        }
+      };
 
-    }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -60,8 +55,8 @@ status.insertBefore(newP, status.firstChild);
 var test = {
 addNetwork: function() {
 
-var ssid =  document.getElementById("SSID").value;
-var pass = document.getElementById("password").value;
+//var ssid =  document.getElementById("SSID").value;
+//var pass = document.getElementById("password").value;
 
 var wifiConfiguration = WifiWizard.formatWifiConfig(ssid, pass, 'WPA');
 
@@ -94,7 +89,8 @@ WifiWizard.disconnectNetwork(ssid, addToStatus, addToStatus);
 },
 
 connect: function() {
-var ssid =  document.getElementById("SSID").value;
+//var ssid =  document.getElementById("SSID").value;
+var ssid = 'utsav';
 addToStatus("Connecting: " + ssid);
 WifiWizard.connectNetwork(ssid, addToStatus, addToStatus);
 },
@@ -117,4 +113,4 @@ if (wwIsObject) {
 }
 else {
   addToStatus("Variable WifiWizard not an object.");
-}
+};
