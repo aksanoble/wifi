@@ -82,6 +82,11 @@ WifiWizard.listNetworks(test.handleList);
 addToStatus("Listing networks...");
 },
 
+scanNetworks: function () {
+WifiWizard.getScanResults(test.handleList);
+
+},
+
 disconnect: function() {
 var ssid =  document.getElementById("SSID").value;
 addToStatus("Disconnecting: " + ssid);
@@ -101,8 +106,8 @@ addToStatus("WifiTest Cleared.");
 }
 };
 
-addToStatus("WifiTest loaded.");
-var wwIsObject = (typeof WifiWizard == "object") ? true : false ;
+//addToStatus("WifiTest loaded.");
+/*var wwIsObject = (typeof WifiWizard == "object") ? true : false ;
 var wwFunctions = [];
 if (wwIsObject) {
   for (var prop in WifiWizard) {
@@ -114,3 +119,4 @@ if (wwIsObject) {
 else {
   addToStatus("Variable WifiWizard not an object.");
 };
+*/
