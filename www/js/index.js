@@ -90,7 +90,7 @@ WifiWizard.disconnectNetwork(ssid, addToStatus, addToStatus);
 
 connect: function() {
 //var ssid =  document.getElementById("SSID").value;
-var ssid = 'utsav';
+var ssid = 'noble';
 addToStatus("Connecting: " + ssid);
 WifiWizard.connectNetwork(ssid, addToStatus, addToStatus);
 },
