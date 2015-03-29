@@ -36,15 +36,6 @@ WifiWizard.listNetworks(test.handleList);
 addToStatus("Listing networks...");
 },
 
-scan: function () {
-  addToStatus("Results: ");
-  WifiWizard.getScanResults(listHandler);
-  function listHandler(list) {
-  addToStatus(list);
-};
-
-},
-
 disconnect: function() {
 var ssid =  document.getElementById("SSID").value;
 addToStatus("Disconnecting: " + ssid);
@@ -53,7 +44,7 @@ WifiWizard.disconnectNetwork(ssid, addToStatus, addToStatus);
 
 connect: function() {
 //var ssid =  document.getElementById("SSID").value;
-var ssid = 'noble';
+var ssid = 'test';
 addToStatus("Connecting: " + ssid);
 WifiWizard.connectNetwork(ssid, addToStatus, addToStatus);
 },
@@ -63,18 +54,3 @@ document.getElementById("status").innerHTML="";
 addToStatus("WifiTest Cleared.");
 }
 };
-
-//addToStatus("WifiTest loaded.");
-/*var wwIsObject = (typeof WifiWizard == "object") ? true : false ;
-var wwFunctions = [];
-if (wwIsObject) {
-  for (var prop in WifiWizard) {
-    wwFunctions.push(prop);
-  }
-  wwFunctions.join(", ")
-  addToStatus("WifiWizard functions: " + wwFunctions.join(", "));
-}
-else {
-  addToStatus("Variable WifiWizard not an object.");
-};
-*/

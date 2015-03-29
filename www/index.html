@@ -23,18 +23,25 @@
 	      </div><!-- /header -->
 
 	       <div data-role="content">
-		        <!--<h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-              <p class="event listening">Connecting to Device</p>
-              <p class="event received">Device is Ready</p>
-              <p id='test' class="test">This</p>
-              <p id='wifi'>Hey</p>
-            </div>-->
-          <button type="button" name="list_networks" onclick='test.scan()'>List Networks</button>
-          <button type="button" name="connect_network" onclick='test.connect()'>Connect</button>
+          <div id="testform">
+  				<form name="WifiTester">
+  					<input type="text" name="SSID" id="SSID" placeholder="SSID"><br>
+  					<input type="text" name="password" id="password" placeholder="password"><br>
+  					<button type="button" name="add_network" onclick='test.addNetwork()'>Add Network</button>
+  					<button type="button" name="remove_network" onclick='test.removeNetwork()'>Remove Network</button>
+  					<button type="button" name="connect_network" onclick='test.connect()'>Connect</button>
+  					<button type="button" name="disconnect_network" onclick='test.disconnect()'>Disconnect</button>
+  					<button type="button" name="list_networks" onclick='test.listNetworks()'>List Networks</button>
+  					<button type="button" name="clear_test" onclick='test.clear()'>Clear</button>
+  				</form>
+  			</div>
+  			<br />
+  			<div id="status">
 
-          <div id = "status"></div>
-	        </div><!-- /content -->
+  			</div>
+
+
+	       </div><!-- /content -->
 
         <div data-role="footer">
 		      <h4>WiFi App</h4>
@@ -46,8 +53,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="WifiWizard.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        
     </body>
 </html>
