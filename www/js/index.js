@@ -43,8 +43,7 @@ WifiWizard.disconnectNetwork(ssid, addToStatus, addToStatus);
 },
 
 connect: function() {
-//var ssid =  document.getElementById("SSID").value;
-var ssid = 'test';
+var ssid =  document.getElementById("SSID").value;
 addToStatus("Connecting: " + ssid);
 WifiWizard.connectNetwork(ssid, addToStatus, addToStatus);
 },
